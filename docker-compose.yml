@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+        tomcat:
+                image: centos
+                ports:
+                        - "8080:8080"
+                        - "4016:4016"
+                volumes:
+                        - ./conf:/usr/local/tomcat/conf
