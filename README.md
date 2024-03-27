@@ -6,6 +6,6 @@ git clone https://github.com/RicDSa/DockerChallenge.git
 
 Na pasta onde estão estes ficheiros correr os seguintes comandos (O Docker tem que estar ativado)
 
-docker build -t (nome de utilizador do docker)/(nome a dar à imagem):latest .
+docker build -t (nome de utilizador do docker)/tomcat8:latest .
 
-docker run --name tomcat -d -p 4016:4016 (nome de utilizador do docker)/(nome a dar à imagem)
+docker run --name tomcat -d -p 4016:4016 (nome de utilizador do docker)/tomcat8
