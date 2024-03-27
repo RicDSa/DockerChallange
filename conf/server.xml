@@ -87,7 +87,7 @@
                maxThreads="150" SSLEnabled="true">
         <UpgradeProtocol className="org.apache.coyote.http2.Http2Protocol" />
         <SSLHostConfig>
-		<Certificate certificateFile="conf/cert.pem" certificateKeyFile="conf/key.pem"
+		<Certificate certificateFile="/opt/tomcat/conf/cert.pem" certificateKeyFile="/opt/tomcat/conf/key.pem"
                          type="RSA" />
         </SSLHostConfig>
     </Connector>

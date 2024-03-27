@@ -1,2 +1,1 @@
-# Docker challenge
-
+# centos7-tomcat8

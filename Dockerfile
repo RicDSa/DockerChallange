@@ -41,12 +41,14 @@ RUN mv openssl /opt/software/openssl
 
 
 # Tomcat scripts setup and sample.war
-ADD sample.war /opt/tomcat/webapps/
+ADD sample.war ${CATALINA_HOME}/webapps/
+COPY conf/server.xml ${CATALINA_HOME}/conf/server.xml
+ADD conf/cert.pem ${CATALINA_HOME}/conf/
+ADD conf/key.pem ${CATALINA_HOME}/conf/
 COPY scripts/ ${CATALINA_HOME}/scripts/
 RUN chmod +x ${CATALINA_HOME}/scripts/*.sh
 
 # Expose and Start Services
 WORKDIR ${CATALINA_HOME}
-EXPOSE 8080 
 EXPOSE 4016 
 CMD ["/opt/tomcat/scripts/tomcat.sh"]
